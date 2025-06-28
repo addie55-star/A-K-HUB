@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D eCommerce Store</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    model-viewer {
+      width: 100%;
+      height: 300px;
+    }
+    .info {
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      background: #28a745;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>3D eCommerce Store</h1>
+  </header>
+
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product">
+      <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="Astronaut Model" auto-rotate camera-controls background-color="#f4f4f4"></model-viewer>
+      <div class="info">
+        <h2>Astronaut Figurine</h2>
+        <p>$49.99</p>
+        <a href="https://buy.stripe.com/test_buynow" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" alt="Robot Model" auto-rotate camera-controls background-color="#f4f4f4"></model-viewer>
+      <div class="info">
+        <h2>Robot Toy</h2>
+        <p>$39.99</p>
+        <a href="https://buy.stripe.com/test_robot" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <model-viewer src="https://modelviewer.dev/shared-assets/models/Chair.glb" alt="Chair Model" auto-rotate camera-controls background-color="#f4f4f4"></model-viewer>
+      <div class="info">
+        <h2>Designer Chair</h2>
+        <p>$129.99</p>
+        <a href="https://buy.stripe.com/test_chair" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
